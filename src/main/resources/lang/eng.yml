@@ -1,0 +1,64 @@
+# Commands
+command-in-game: "&cThis command can only be used in a game!"
+command-enable-already-enabled: "&cThe whitelist is already enabled"
+command-enable-enabled: "The whitelist was enabled"
+command-disable-already-disabled: "&cThe whitelist is already disabled"
+command-disable-disabled: "The whitelist was disabled"
+command-addplayer-missing-nickname: "&cPlayer's nickname is not specified"
+command-addplayer-already-added: "&cPlayer [0] already added to the whitelist"
+command-addplayer-added: "Player [0] added to the whitelist"
+command-removeplayer-missing-nickname: "&cPlayer's nickname is not specified"
+command-removeplayer-not-found: "&cThis player is not on the whitelist"
+command-removeplayer-removed: "Player [0] has been removed from the whitelist"
+
+# Forms
+
+# Whitelist main form
+form-main-title: "Whitelist"
+form-main-content: "Whitelist management"
+form-main-button-toggle-enable: "&aEnable whitelist"
+form-main-button-toggle-disable: "&cDisable whitelist"
+form-main-button-players: "Players"
+form-main-button-settings: "Settings"
+
+# Whitelist toggle form
+form-toggle-title: "Whitelist toggle"
+form-toggle-content-enable: "If you enable the whitelist, only allowed players will be able to join the server"
+form-toggle-content-disable: "If you disable the whitelist, all players will be able to join the server"
+form-toggle-button-enable: "&aEnable"
+form-toggle-button-disable: "&cDisable"
+form-toggle-button-back: "Back"
+form-toggle-message-enable: "The whitelist was enabled"
+form-toggle-message-disable: "The whitelist was disabled"
+
+# Whitelist players form
+form-players-title: "Whitelist players"
+form-players-content: "Add the players you want to whitelist"
+form-players-button-add: "Add a player"
+form-players-button-format: "[1]\n&cClick to delete"
+
+# Whitelist add player form
+form-add-player-title: "Add a new player"
+form-add-player-input-name-name: "Enter the player's nickname"
+form-add-player-input-name-placeholder: "Player"
+form-add-player-message-added: "Player [0] added to the whitelist"
+form-add-player-message-already-added: "&cPlayer [0] already added to the whitelist"
+
+# Whitelist remove player form
+form-remove-player-title: "Remove a player"
+form-remove-player-content: "If you delete this player, he will not be able to join the server anymore until you disable the whitelist"
+form-remove-player-button-remove: "Delete"
+form-remove-player-button-back: "Back"
+form-remove-player-message-removed: "Player [0] has been removed from the whitelist"
+
+# Whitelist settings form
+form-settings-title: "Whitelist settings"
+form-settings-toggle-enable: "Enable the whitelist"
+form-settings-toggle-kick-online-players: "Kick online players"
+form-settings-input-kick-message-name: "Kick message"
+form-settings-input-kick-message-placeholder: "Message"
+form-settings-message-kick-message-blank: "The kick message cannot be blank"
+form-settings-message-settings-saved: "Settings are saved"
+form-settings-message-settings-not-saved: "Settings are not saved"
+form-settings-message-whitelist-enabled: "&eWhitelist is enabled, only allowed players can join the server now!"
+form-settings-message-whitelist-disabled: "&eWhitelist is disabled, anyone can join the server now!"

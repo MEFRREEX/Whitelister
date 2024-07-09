@@ -1,0 +1,9 @@
+# Available languages: eng (English)
+language: "eng"
+
+# Commands
+commands:
+  whitelister:
+    name: "whitelister"
+    description: "Whitelister"
+    aliases: []

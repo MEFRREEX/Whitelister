@@ -1,6 +1,0 @@
-{
-    "enable": false,
-    "kickOnlinePlayers": false,
-    "kickMessage": "The server is whitelisted",
-    "allowedPlayers": []
-}

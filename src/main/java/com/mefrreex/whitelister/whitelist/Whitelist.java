@@ -10,8 +10,8 @@ public class Whitelist {
 
     private boolean enable;
     private boolean kickOnlinePlayers;
-    private String kickMessage;
-    private final Set<String> allowedPlayers = new HashSet<>();
+    private String kickMessage = "The server is whitelisted";
+    private Set<String> allowedPlayers = new HashSet<>();
 
     public boolean isPlayerAllowed(String playerName) {
         return allowedPlayers.contains(playerName.toLowerCase());

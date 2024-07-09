@@ -1,6 +1,19 @@
 # Available languages: eng (English), rus (Русский)
 language: "eng"
 
+# Provider settings
+provider:
+  # Available: SQLITE, MYSQL, JSON
+  # SQLITE and MYSQL require JOOQConnector plugin:
+  # https://github.com/MEFRREEX/JOOQConnector/
+  type: "JSON"
+  # MySQL settings
+  mysql:
+    host: "127.0.0.1"
+    database: "regions"
+    user: "user"
+    password: "password123"
+
 # Commands
 commands:
   whitelister:

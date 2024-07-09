@@ -4,7 +4,7 @@ plugins {
 
 group = "com.mefrreex.whitelister"
 description = "whitelister"
-version = "1.0.0"
+version = "1.1.0"
 
 java.sourceCompatibility = JavaVersion.VERSION_17
 
@@ -18,6 +18,8 @@ repositories {
 dependencies {
     compileOnly("cn.nukkit:nukkit:1.0-SNAPSHOT")
     compileOnly("com.github.MEFRREEX:FormConstructor:2.0.3")
+    compileOnly("com.github.MEFRREEX:JOOQConnector:1.0.1")
+    compileOnly("org.jooq:jooq:3.19.7")
     compileOnly("org.projectlombok:lombok:1.18.32")
     annotationProcessor("org.projectlombok:lombok:1.18.32")
 }

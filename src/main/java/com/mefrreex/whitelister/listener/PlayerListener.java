@@ -14,6 +14,10 @@ public class PlayerListener implements Listener {
     public void onLogin(PlayerLoginEvent event) {
         Player player = event.getPlayer();
 
+        if (player.hasPermission("whitelister.bypass")) {
+            return;
+        }
+
         WhitelistManager whitelistManager = Whitelister.getInstance().getWhitelistManager();
         Whitelist whitelist = whitelistManager.getWhitelist();
 

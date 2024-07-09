@@ -7,3 +7,7 @@ main: com.mefrreex.whitelister.Whitelister
 depend:
   - "FormConstructor"
   - "JOOQConnector"
+
+permissions:
+  whitelister.bypass:
+    default: false

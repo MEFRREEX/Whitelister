@@ -10,6 +10,11 @@ command-addplayer-added: "Игрок [0] добавлен в белый спис
 command-removeplayer-missing-nickname: "&cНикнейм игрока не указан"
 command-removeplayer-not-found: "&cЭтого игрока нет в белом списке"
 command-removeplayer-removed: "Игрок [0] был удален из белого списка"
+command-kickmessage-kick-message-blank: "&cСообщение при отключении не может быть пустым"
+command-kickmessage-set: "Сообщение при отключении установлено"
+command-kickplayers-wrong-value: "&cЗначение должно быть true или false"
+command-kickplayers-enabled: "Отключение онлайн игроков включено"
+command-kickplayers-disabled: "Отключение онлайн игроков выключено"
 
 # Формы
 
@@ -57,7 +62,7 @@ form-settings-toggle-enable: "Включить белый список"
 form-settings-toggle-kick-online-players: "Отключать онлайн игроков"
 form-settings-input-kick-message-name: "Сообщение при отключении"
 form-settings-input-kick-message-placeholder: "Сообщение"
-form-settings-message-kick-message-blank: "Сообщение при отключении не может быть пустым"
+form-settings-message-kick-message-blank: "&cСообщение при отключении не может быть пустым"
 form-settings-message-settings-saved: "Настройки сохранены"
 form-settings-message-settings-not-saved: "Настройки не сохранены"
 form-settings-message-whitelist-enabled: "&eБелый список включен, теперь только разрешенные игроки могут присоединиться к серверу!"

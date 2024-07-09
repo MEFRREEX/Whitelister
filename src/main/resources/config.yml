@@ -10,7 +10,7 @@ provider:
   # MySQL settings
   mysql:
     host: "127.0.0.1"
-    database: "regions"
+    database: "whitelist"
     user: "user"
     password: "password123"
 

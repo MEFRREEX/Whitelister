@@ -47,7 +47,7 @@ form-add-player-message-already-added: "&cPlayer [0] already added to the whitel
 # Whitelist remove player form
 form-remove-player-title: "Remove a player"
 form-remove-player-content: "If you delete this player, he will not be able to join the server anymore until you disable the whitelist"
-form-remove-player-button-remove: "Delete"
+form-remove-player-button-remove: "&cDelete"
 form-remove-player-button-back: "Back"
 form-remove-player-message-removed: "Player [0] has been removed from the whitelist"
 

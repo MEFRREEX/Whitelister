@@ -1,0 +1,64 @@
+# Команды
+command-in-game: "&cЭта команда может быть использована только в игре!"
+command-enable-already-enabled: "&cБелый список уже включен"
+command-enable-enabled: "Белый список был включен"
+command-disable-already-disabled: "&cБелый список уже отключен"
+command-disable-disabled: "Белый список был отключен"
+command-addplayer-missing-nickname: "&cНикнейм игрока не указан"
+command-addplayer-already-added: "&cИгрок [0] уже добавлен в белый список"
+command-addplayer-added: "Игрок [0] добавлен в белый список"
+command-removeplayer-missing-nickname: "&cНикнейм игрока не указан"
+command-removeplayer-not-found: "&cЭтого игрока нет в белом списке"
+command-removeplayer-removed: "Игрок [0] был удален из белого списка"
+
+# Формы
+
+# Главная форма белого списка
+form-main-title: "Белый список"
+form-main-content: "Управление белым списком"
+form-main-button-toggle-enable: "&aВключить белый список"
+form-main-button-toggle-disable: "&cОтключить белый список"
+form-main-button-players: "Игроки"
+form-main-button-settings: "Настройки"
+
+# Форма переключения белых списков
+form-toggle-title: "Переключение белого списка"
+form-toggle-content-enable: "Если вы включите белый список, только разрешенные игроки смогут присоединиться к серверу"
+form-toggle-content-disable: "Если вы отключите белый список, все игроки смогут присоединиться к серверу"
+form-toggle-button-enable: "&aВключить"
+form-toggle-button-disable: "&cОтключить"
+form-toggle-button-back: "Назад"
+form-toggle-message-enable: "Белый список был включен"
+form-toggle-message-disable: "Белый список был отключен"
+
+# Форма игроков в белом списке
+form-players-title: "Игроки в белом списке"
+form-players-content: "Добавьте игроков, которых вы хотите в белый список"
+form-players-button-add: "Добавить игрока"
+form-players-button-format: "[1]\n&cНажмите, чтобы удалить"
+
+# Форма добавления игрока в белый список
+form-add-player-title: "Добавление нового игрока"
+form-add-player-input-name-name: "Введите никнейм игрока"
+form-add-player-input-name-placeholder: "Игрок"
+form-add-player-message-added: "Игрок [0] добавлен в белый список"
+form-add-player-message-already-added: "&cИгрок [0] уже добавлен в белый список"
+
+# Форма удаления игрока из белого списка
+form-remove-player-title: "Удаление игрока"
+form-remove-player-content: "Если вы удалите этого игрока, он больше не сможет присоединиться к серверу, пока вы не отключите белый список."
+form-remove-player-button-remove: "&cУдалить"
+form-remove-player-button-back: "Назад"
+form-remove-player-message-removed: "Игрок [0] был удален из белого списка"
+
+# Форма настроек белого списка
+form-settings-title: "Настройки белого списка"
+form-settings-toggle-enable: "Включить белый список"
+form-settings-toggle-kick-online-players: "Отключать онлайн игроков"
+form-settings-input-kick-message-name: "Сообщение при отключении"
+form-settings-input-kick-message-placeholder: "Сообщение"
+form-settings-message-kick-message-blank: "Сообщение при отключении не может быть пустым"
+form-settings-message-settings-saved: "Настройки сохранены"
+form-settings-message-settings-not-saved: "Настройки не сохранены"
+form-settings-message-whitelist-enabled: "&eБелый список включен, теперь только разрешенные игроки могут присоединиться к серверу!"
+form-settings-message-whitelist-disabled: "&eБелый список отключен, теперь любой игрок может присоединиться к серверу!"

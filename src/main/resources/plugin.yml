@@ -9,5 +9,7 @@ depend:
   - "JOOQConnector"
 
 permissions:
+  whitelister.command.whitelister:
+    default: op
   whitelister.bypass:
     default: false

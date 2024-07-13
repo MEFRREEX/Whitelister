@@ -3,6 +3,7 @@ package com.mefrreex.whitelister.form;
 import cn.nukkit.Player;
 import com.formconstructor.form.ModalForm;
 import com.mefrreex.whitelister.Whitelister;
+import com.mefrreex.whitelister.event.WhitelistKickPlayerEvent;
 import com.mefrreex.whitelister.utils.Language;
 import com.mefrreex.whitelister.whitelist.Whitelist;
 import com.mefrreex.whitelister.whitelist.WhitelistManager;
@@ -26,7 +27,7 @@ public class WhitelistToggleForm {
                     if (result) {
                         whitelist.setEnable(!whitelist.isEnable());
                         if (whitelist.isKickOnlinePlayers()) {
-                            whitelistManager.kickNotAllowedPlayers();
+                            whitelistManager.kickNotAllowedPlayers(WhitelistKickPlayerEvent.Reason.ONLINE);
                         }
 
                         player.sendMessage(Language.get(whitelist.isEnable() ?

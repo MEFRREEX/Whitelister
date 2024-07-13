@@ -3,6 +3,7 @@ package com.mefrreex.whitelister.command.subcommand;
 import cn.nukkit.command.CommandSender;
 import com.mefrreex.whitelister.Whitelister;
 import com.mefrreex.whitelister.command.BaseSubCommand;
+import com.mefrreex.whitelister.event.WhitelistKickPlayerEvent;
 import com.mefrreex.whitelister.utils.Language;
 import com.mefrreex.whitelister.whitelist.Whitelist;
 import com.mefrreex.whitelister.whitelist.WhitelistManager;
@@ -30,7 +31,7 @@ public class WhitelistEnableSubCommand extends BaseSubCommand {
         sender.sendMessage(Language.get("command-enable-enabled"));
 
         if (whitelist.isKickOnlinePlayers()) {
-            whitelistManager.kickNotAllowedPlayers();
+            whitelistManager.kickNotAllowedPlayers(WhitelistKickPlayerEvent.Reason.ONLINE);
         }
     }
 }

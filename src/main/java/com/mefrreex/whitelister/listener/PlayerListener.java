@@ -5,6 +5,7 @@ import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
 import cn.nukkit.event.player.PlayerLoginEvent;
 import com.mefrreex.whitelister.Whitelister;
+import com.mefrreex.whitelister.event.WhitelistKickPlayerEvent;
 import com.mefrreex.whitelister.whitelist.Whitelist;
 import com.mefrreex.whitelister.whitelist.WhitelistManager;
 
@@ -22,7 +23,7 @@ public class PlayerListener implements Listener {
         Whitelist whitelist = whitelistManager.getWhitelist();
 
         if (whitelist.isEnable() && !whitelist.isPlayerAllowed(player.getName())) {
-            whitelistManager.kickPlayer(player);
+            whitelistManager.kickPlayer(player, WhitelistKickPlayerEvent.Reason.JOINING);
             event.setCancelled();
         }
     }

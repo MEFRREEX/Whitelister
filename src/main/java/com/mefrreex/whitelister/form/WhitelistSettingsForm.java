@@ -6,6 +6,7 @@ import com.formconstructor.form.CustomForm;
 import com.formconstructor.form.element.custom.Input;
 import com.formconstructor.form.element.custom.Toggle;
 import com.mefrreex.whitelister.Whitelister;
+import com.mefrreex.whitelister.event.WhitelistKickPlayerEvent;
 import com.mefrreex.whitelister.utils.Language;
 import com.mefrreex.whitelister.whitelist.Whitelist;
 import com.mefrreex.whitelister.whitelist.WhitelistManager;
@@ -48,7 +49,7 @@ public class WhitelistSettingsForm {
             }
 
             if (enable && whitelist.isKickOnlinePlayers()) {
-                whitelistManager.kickNotAllowedPlayers();
+                whitelistManager.kickNotAllowedPlayers(WhitelistKickPlayerEvent.Reason.ONLINE);
             }
         });
 

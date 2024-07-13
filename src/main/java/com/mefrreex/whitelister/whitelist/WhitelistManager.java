@@ -2,6 +2,7 @@ package com.mefrreex.whitelister.whitelist;
 
 import cn.nukkit.Player;
 import cn.nukkit.Server;
+import com.mefrreex.whitelister.event.WhitelistKickPlayerEvent;
 import com.mefrreex.whitelister.provider.WhitelistProvider;
 import lombok.Getter;
 
@@ -20,14 +21,21 @@ public class WhitelistManager {
         this.whitelistProvider = whitelistProvider;
     }
 
-    public void kickPlayer(Player player) {
-        player.kick(whitelist.getKickMessage(), false);
+    public void kickPlayer(Player player, WhitelistKickPlayerEvent.Reason reason) {
+        WhitelistKickPlayerEvent event = new WhitelistKickPlayerEvent(whitelist.getKickMessage(), reason);
+        Server.getInstance().getPluginManager().callEvent(event);
+
+        if (event.isCancelled()) {
+            return;
+        }
+
+        player.kick(event.getKickMessage(), false);
     }
 
-    public void kickNotAllowedPlayers() {
+    public void kickNotAllowedPlayers(WhitelistKickPlayerEvent.Reason reason) {
         for (Player player : Server.getInstance().getOnlinePlayers().values()) {
             if (!whitelist.isPlayerAllowed(player.getName())) {
-                this.kickPlayer(player);
+                this.kickPlayer(player, reason);
             }
         }
     }

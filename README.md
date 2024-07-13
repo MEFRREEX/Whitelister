@@ -38,6 +38,6 @@ The plugin is designed to make the whitelist easier to work with and provides a 
 ## 🔌 Installation
 1. Download the plugin from the [releases](https://github.com/MEFRREEX/Whitelister/releases).
 2. Place the plugin .jar file in your `plugins` folder
-3. Download [JOOQConnector](https://github.com/MEFRREEX/JOOQConnector).
-4. Place the JOOQConnector .jar file in your `plugins` folder
+3. Download [JOOQConnector](https://github.com/MEFRREEX/JOOQConnector) and place the JOOQConnector .jar file in your `plugins` folder.
+4. Download [FormConstructor](https://github.com/MEFRREEX/FormConstructor) and place the FormConstructor .jar file in your `plugins` folder.
 5. Start the server!

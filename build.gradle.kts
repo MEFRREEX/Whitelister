@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("cn.nukkit:nukkit:1.0-SNAPSHOT")
+    compileOnly("com.github.PowerNukkitX:PowerNukkitX:master-SNAPSHOT")
     compileOnly("com.github.MEFRREEX:FormConstructor:2.0.3")
     compileOnly("com.github.MEFRREEX:JOOQConnector:1.0.1")
     compileOnly("org.jooq:jooq:3.19.7")

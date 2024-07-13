@@ -23,10 +23,10 @@ The plugin is designed to make the whitelist easier to work with and provides a 
 | /whitelister   | Plugin main command |
 
 ## 🔒 Permissions
-| Name                            | Description                                                       |
-|---------------------------------|-------------------------------------------------------------------|
-| whitelister.command.whitelister | Allows the player to use the /whitelister command                 |
-| whitelister.bypass              | Allows a player to enter a whitelisted server without being on it |
+| Name                            | Description                                                      |
+|---------------------------------|------------------------------------------------------------------|
+| whitelister.command.whitelister | Allows the player to use the /whitelister command                |
+| whitelister.bypass              | Allows a player to join a whitelisted server without being on it |
 
 ## 📋 Events
 | Name                        | Cancellable | Description                                                    |

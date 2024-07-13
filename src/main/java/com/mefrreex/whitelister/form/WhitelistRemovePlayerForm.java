@@ -18,7 +18,7 @@ public class WhitelistRemovePlayerForm {
                             if (error != null) {
                                 error.printStackTrace();
                             } else {
-                                player.sendMessage(Language.get("form-remove-player-message-removed"));
+                                player.sendMessage(Language.get("form-remove-player-message-removed", playerName));
                             }
                         });
                     } else {

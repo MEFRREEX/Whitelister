@@ -1,6 +1,8 @@
 # Whitelister
-
 Advanced whitelist plugin for Nukkit and PowerNukkitX
+
+[![License: GNU GPLv3](https://img.shields.io/badge/License-%20%20GNU%20GPLv3%20-yellow)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-1.4.0-brightgreen)](https://github.com/MEFRREEX/Whitelister/releases/tag/1.4.0)
 
 ## 🤔 Introduction
 

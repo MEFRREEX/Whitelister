@@ -34,12 +34,21 @@ public class WhitelistAddPlayerSubCommand extends BaseSubCommand {
             return;
         }
 
-        if (whitelist.isPlayerAllowed(playerName)) {
-            sender.sendMessage(Language.get("command-addplayer-already-added", playerName));
-            return;
-        }
-
-        whitelist.addAllowedPlayer(playerName);
-        sender.sendMessage(Language.get("command-addplayer-added", playerName));
+        whitelist.isPlayerAllowed(playerName).thenAcceptAsync(allowed -> {
+            if (allowed) {
+                sender.sendMessage(Language.get("command-addplayer-already-added", playerName));
+            } else {
+                whitelist.addAllowedPlayer(playerName).whenCompleteAsync((v, error) -> {
+                    if (error != null) {
+                        error.printStackTrace();
+                    } else {
+                        sender.sendMessage(Language.get("command-addplayer-added", playerName));
+                    }
+                });
+            }
+        }).exceptionally(error -> {
+            error.printStackTrace();
+            return null;
+        });
     }
 }

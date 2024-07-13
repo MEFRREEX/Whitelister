@@ -34,12 +34,21 @@ public class WhitelistRemovePlayerSubCommand extends BaseSubCommand {
             return;
         }
 
-        if (!whitelist.isPlayerAllowed(playerName)) {
-            sender.sendMessage(Language.get("command-removeplayer-not-found", playerName));
-            return;
-        }
-
-        whitelist.removeAllowedPlayer(playerName);
-        sender.sendMessage(Language.get("command-removeplayer-removed", playerName));
+        whitelist.isPlayerAllowed(playerName).thenAcceptAsync(allowed -> {
+            if (!allowed) {
+                sender.sendMessage(Language.get("command-removeplayer-not-found", playerName));
+            } else {
+                whitelist.removeAllowedPlayer(playerName).whenCompleteAsync((v, error) -> {
+                    if (error != null) {
+                        error.printStackTrace();
+                    } else {
+                        sender.sendMessage(Language.get("command-removeplayer-removed", playerName));
+                    }
+                });
+            }
+        }).exceptionally(error -> {
+            error.printStackTrace();
+            return null;
+        });
     }
 }

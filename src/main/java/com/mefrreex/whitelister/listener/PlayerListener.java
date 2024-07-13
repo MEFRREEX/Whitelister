@@ -22,9 +22,16 @@ public class PlayerListener implements Listener {
         WhitelistManager whitelistManager = Whitelister.getInstance().getWhitelistManager();
         Whitelist whitelist = whitelistManager.getWhitelist();
 
-        if (whitelist.isEnable() && !whitelist.isPlayerAllowed(player.getName())) {
-            whitelistManager.kickPlayer(player, WhitelistKickPlayerEvent.Reason.JOINING);
-            event.setCancelled();
+        if (whitelist.isEnable()) {
+            whitelist.isPlayerAllowed(player.getName()).thenAcceptAsync((allowed) -> {
+                if (!allowed) {
+                    whitelistManager.kickPlayer(player, WhitelistKickPlayerEvent.Reason.JOINING);
+                    event.setCancelled();
+                }
+            }).exceptionally(error -> {
+                error.printStackTrace();
+                return null;
+            });
         }
     }
 }

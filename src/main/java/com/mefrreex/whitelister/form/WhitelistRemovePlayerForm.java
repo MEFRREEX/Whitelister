@@ -14,8 +14,13 @@ public class WhitelistRemovePlayerForm {
                 .setNegativeButton(Language.get("form-remove-player-button-back"))
                 .setHandler((pl, result) -> {
                     if (result) {
-                        whitelist.removeAllowedPlayer(playerName);
-                        player.sendMessage(Language.get("form-remove-player-message-removed"));
+                        whitelist.removeAllowedPlayer(playerName).whenCompleteAsync((v, error) -> {
+                            if (error != null) {
+                                error.printStackTrace();
+                            } else {
+                                player.sendMessage(Language.get("form-remove-player-message-removed"));
+                            }
+                        });
                     } else {
                         WhitelistPlayersForm.sendTo(player, whitelist);
                     }

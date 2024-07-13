@@ -2,8 +2,8 @@ package com.mefrreex.whitelister.whitelist;
 
 import lombok.Data;
 
-import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.CompletableFuture;
 
 @Data
 public class Whitelist {
@@ -11,17 +11,22 @@ public class Whitelist {
     private boolean enable;
     private boolean kickOnlinePlayers;
     private String kickMessage = "The server is whitelisted";
-    private Set<String> allowedPlayers = new HashSet<>();
 
-    public boolean isPlayerAllowed(String playerName) {
-        return allowedPlayers.contains(playerName.toLowerCase());
+    public transient final WhitelistPlayerManager playerManager;
+
+    public CompletableFuture<Set<String>> getAllowedPlayers() {
+        return this.getPlayerManager().getAllowedPlayers();
     }
 
-    public void addAllowedPlayer(String playerName) {
-        allowedPlayers.add(playerName.toLowerCase());
+    public CompletableFuture<Boolean> isPlayerAllowed(String playerName) {
+        return this.getPlayerManager().isPlayerAllowed(playerName);
     }
 
-    public void removeAllowedPlayer(String playerName) {
-        allowedPlayers.remove(playerName.toLowerCase());
+    public CompletableFuture<Void> addAllowedPlayer(String playerName) {
+        return this.getPlayerManager().addAllowedPlayer(playerName.toLowerCase());
+    }
+
+    public CompletableFuture<Void> removeAllowedPlayer(String playerName) {
+        return this.getPlayerManager().removeAllowedPlayer(playerName.toLowerCase());
     }
 }

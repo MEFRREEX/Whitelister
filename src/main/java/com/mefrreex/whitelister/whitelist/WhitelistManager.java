@@ -33,12 +33,18 @@ public class WhitelistManager {
     }
 
     public void kickNotAllowedPlayers(WhitelistKickPlayerEvent.Reason reason) {
-        for (Player player : Server.getInstance().getOnlinePlayers().values()) {
-            if (!whitelist.isPlayerAllowed(player.getName())) {
-                this.kickPlayer(player, reason);
-            }
-        }
+        Server.getInstance().getOnlinePlayers().values().forEach(player -> {
+            whitelist.isPlayerAllowed(player.getName()).thenAcceptAsync(allowed -> {
+                if (!allowed) {
+                    this.kickPlayer(player, reason);
+                }
+            }).exceptionally(error -> {
+                error.printStackTrace();
+                return null;
+            });
+        });
     }
+
 
     public void loadWhitelist() {
         try {

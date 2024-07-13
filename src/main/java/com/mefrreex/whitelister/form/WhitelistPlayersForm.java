@@ -18,18 +18,25 @@ public class WhitelistPlayersForm {
             WhitelistAddPlayerForm.sendTo(player, whitelist);
         });
 
-        for (String playerName : whitelist.getAllowedPlayers()) {
+        whitelist.getAllowedPlayers().whenCompleteAsync((playerNames, error) -> {
+            if (error != null) {
+                error.printStackTrace();
+            } else {
+                for (String playerName : playerNames) {
 
-            IPlayer offlinePlayer = Utils.getOfflinePlayer(playerName);
-            String offlinePlayerName = offlinePlayer != null ? offlinePlayer.getName() : playerName;
+                    IPlayer offlinePlayer = Utils.getOfflinePlayer(playerName);
+                    String offlinePlayerName = offlinePlayer != null ? offlinePlayer.getName() : playerName;
 
-            form.addButton(new Button()
-                    .setName(Language.get("form-players-button-format", playerName, offlinePlayerName))
-                    .onClick((pl, b) -> {
-                        WhitelistRemovePlayerForm.sendTo(player, whitelist, playerName);
-                    }));
-        }
+                    form.addButton(new Button()
+                            .setName(Language.get("form-players-button-format", playerName, offlinePlayerName))
+                            .onClick((pl, b) -> {
+                                WhitelistRemovePlayerForm.sendTo(player, whitelist, playerName);
+                            }));
+                }
+            }
 
-        form.send(player);
+            form.send(player);
+        });
+
     }
 }

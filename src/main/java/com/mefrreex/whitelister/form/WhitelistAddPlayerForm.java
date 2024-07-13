@@ -16,15 +16,24 @@ public class WhitelistAddPlayerForm {
                 .setPlaceholder(Language.get("form-add-player-input-name-placeholder")));
 
         form.setHandler((pl, response) -> {
-           String playerName = response.getInput("name").getValue();
+            String playerName = response.getInput("name").getValue();
 
-            if (whitelist.isPlayerAllowed(playerName)) {
-                player.sendMessage(Language.get("form-add-player-message-already-added", playerName));
-                return;
-            }
-
-            whitelist.addAllowedPlayer(playerName);
-            player.sendMessage(Language.get("form-add-player-message-added", playerName));
+            whitelist.isPlayerAllowed(playerName).thenAcceptAsync(allowed -> {
+                if (allowed) {
+                    player.sendMessage(Language.get("form-add-player-message-already-added", playerName));
+                } else {
+                    whitelist.addAllowedPlayer(playerName).whenCompleteAsync((v, error) -> {
+                        if (error != null) {
+                            error.printStackTrace();
+                        } else {
+                            player.sendMessage(Language.get("form-add-player-message-added", playerName));
+                        }
+                    });
+                }
+            }).exceptionally(error -> {
+                error.printStackTrace();
+                return null;
+            });
         });
 
         form.send(player);

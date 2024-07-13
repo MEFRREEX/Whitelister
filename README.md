@@ -36,4 +36,8 @@ The plugin is designed to make the whitelist easier to work with and provides a 
 | WhitelistKickPlayerEvent    | true        | Called when a player is kicked from the server by a whitelist  |
 
 ## 🔌 Installation
-Place the plugin of the appropriate version in the `plugins` folder.
+1. Download the plugin from the [releases](https://github.com/MEFRREEX/Whitelister/releases).
+2. Place the plugin .jar file in your `plugins` folder
+3. Download [JOOQConnector](https://github.com/MEFRREEX/JOOQConnector).
+4. Place the JOOQConnector .jar file in your `plugins` folder
+5. Start the server!

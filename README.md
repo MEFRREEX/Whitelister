@@ -9,7 +9,7 @@ The plugin is designed to make the whitelist easier to work with and provides a 
 - Configuring the whitelist via commands
 - Configuring all messages in a specific file
 - Setting that allows to kick all players when whitelist is enabled
-- SQLite3 and MySQL support
+- Json, SQLite3 and MySQL support
 - English, Russian language support
 
 ## 📷 Screenshots

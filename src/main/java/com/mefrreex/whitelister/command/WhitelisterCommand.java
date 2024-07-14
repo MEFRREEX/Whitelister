@@ -16,6 +16,7 @@ public class WhitelisterCommand extends BaseCommand {
         this.registerSubCommand(new WhitelistKickPlayersSubCommand());
         this.registerSubCommand(new WhitelistAddPlayerSubCommand());
         this.registerSubCommand(new WhitelistRemovePlayerSubCommand());
+        this.registerSubCommand(new WhitelistPlayerListSubCommand());
         this.registerSubCommand(new WhitelistKickMessageSubCommand());
         this.registerSubCommand(new WhitelistKickPlayersSubCommand());
     }

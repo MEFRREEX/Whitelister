@@ -10,6 +10,8 @@ command-addplayer-added: "Гравець [0] доданий до білого с
 command-removeplayer-missing-nickname: "&cНікнейм гравця не вказаний"
 command-removeplayer-not-found: "&cЦього гравця немає у білому списку"
 command-removeplayer-removed: "Гравець [0] був видалений з білого списку"
+command-playerlist-list: "Гравці, додані до білого списку: [0]"
+command-playerlist-empty: "&cУ білому списку немає гравців"
 command-kickmessage-kick-message-blank: "&cПовідомлення при відключенні не може бути порожнім"
 command-kickmessage-set: "Повідомлення при відключенні встановлено"
 command-kickplayers-wrong-value: "&cЗначення повинно бути true або false"

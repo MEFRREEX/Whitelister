@@ -9,6 +9,7 @@ import com.mefrreex.whitelister.provider.DatabaseWhitelistProvider;
 import com.mefrreex.whitelister.provider.JsonWhitelistProvider;
 import com.mefrreex.whitelister.provider.WhitelistProvider;
 import com.mefrreex.whitelister.utils.Language;
+import com.mefrreex.whitelister.utils.metrics.MetricsLoader;
 import com.mefrreex.whitelister.whitelist.Whitelist;
 import com.mefrreex.whitelister.whitelist.WhitelistManager;
 import lombok.Getter;
@@ -34,7 +35,7 @@ public class Whitelister extends PluginBase {
     public void onEnable() {
         Language.init(this);
 
-        // Whitelist repository initialization
+        // Whitelist provider initialization
         this.whitelistProvider = switch(this.getConfig().getString("provider.type").toUpperCase()) {
             case "SQLITE" -> new DatabaseWhitelistProvider(new SQLiteDatabase(new File(this.getDataFolder(), "database.db")));
             case "MYSQL" -> {
@@ -57,6 +58,10 @@ public class Whitelister extends PluginBase {
 
         this.getServer().getCommandMap().register("Whitelister", new WhitelisterCommand());
         this.getServer().getPluginManager().registerEvents(new PlayerListener(), this);
+
+        // Metrics
+        MetricsLoader metricsLoader = new MetricsLoader();
+        metricsLoader.addCustomMetrics();
     }
 
     @Override

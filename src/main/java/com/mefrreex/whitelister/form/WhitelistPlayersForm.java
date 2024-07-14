@@ -37,6 +37,5 @@ public class WhitelistPlayersForm {
 
             form.send(player);
         });
-
     }
 }

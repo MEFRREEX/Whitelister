@@ -1,4 +1,4 @@
-# Available languages: eng (English), rus (Русский)
+# Available languages: eng (English), rus (Русский), ukr (Українська)
 language: "eng"
 
 # Provider settings

@@ -1,0 +1,69 @@
+# Команди
+command-in-game: "&cЦя команда може бути використана тільки в грі!"
+command-enable-already-enabled: "&cБілий список вже увімкнений"
+command-enable-enabled: "Білий список був увімкнений"
+command-disable-already-disabled: "&cБілий список вже вимкнений"
+command-disable-disabled: "Білий список був вимкнений"
+command-addplayer-missing-nickname: "&cНікнейм гравця не вказаний"
+command-addplayer-already-added: "&cГравець [0] вже доданий до білого списку"
+command-addplayer-added: "Гравець [0] доданий до білого списку"
+command-removeplayer-missing-nickname: "&cНікнейм гравця не вказаний"
+command-removeplayer-not-found: "&cЦього гравця немає у білому списку"
+command-removeplayer-removed: "Гравець [0] був видалений з білого списку"
+command-kickmessage-kick-message-blank: "&cПовідомлення при відключенні не може бути порожнім"
+command-kickmessage-set: "Повідомлення при відключенні встановлено"
+command-kickplayers-wrong-value: "&cЗначення повинно бути true або false"
+command-kickplayers-enabled: "Відключення онлайн гравців увімкнено"
+command-kickplayers-disabled: "Відключення онлайн гравців вимкнено"
+
+# Форми
+
+# Головна форма білого списку
+form-main-title: "Білий список"
+form-main-content: "Управління білим списком"
+form-main-button-toggle-enable: "&aУвімкнути білий список"
+form-main-button-toggle-disable: "&cВимкнути білий список"
+form-main-button-players: "Гравці"
+form-main-button-settings: "Налаштування"
+
+# Форма перемикання білого списку
+form-toggle-title: "Перемикання білого списку"
+form-toggle-content-enable: "Якщо ви увімкнете білий список, тільки дозволені гравці зможуть приєднатися до сервера"
+form-toggle-content-disable: "Якщо ви вимкнете білий список, всі гравці зможуть приєднатися до сервера"
+form-toggle-button-enable: "&aУвімкнути"
+form-toggle-button-disable: "&cВимкнути"
+form-toggle-button-back: "Назад"
+form-toggle-message-enable: "Білий список був увімкнений"
+form-toggle-message-disable: "Білий список був вимкнений"
+
+# Форма гравців у білому списку
+form-players-title: "Гравці у білому списку"
+form-players-content: "Додайте гравців, яких ви хочете у білому списку"
+form-players-button-add: "Додати гравця"
+form-players-button-format: "[1]\n&cНатисніть, щоб видалити"
+
+# Форма додавання гравця до білого списку
+form-add-player-title: "Додавання нового гравця"
+form-add-player-input-name-name: "Введіть нікнейм гравця"
+form-add-player-input-name-placeholder: "Гравець"
+form-add-player-message-added: "Гравець [0] доданий до білого списку"
+form-add-player-message-already-added: "&cГравець [0] вже доданий до білого списку"
+
+# Форма видалення гравця з білого списку
+form-remove-player-title: "Видалення гравця"
+form-remove-player-content: "Якщо ви видалите цього гравця, він більше не зможе приєднатися до сервера, поки ви не вимкнете білий список."
+form-remove-player-button-remove: "&cВидалити"
+form-remove-player-button-back: "Назад"
+form-remove-player-message-removed: "Гравець [0] був видалений з білого списку"
+
+# Форма налаштувань білого списку
+form-settings-title: "Налаштування білого списку"
+form-settings-toggle-enable: "Увімкнути білий список"
+form-settings-toggle-kick-online-players: "Відключати онлайн гравців"
+form-settings-input-kick-message-name: "Повідомлення при відключенні"
+form-settings-input-kick-message-placeholder: "Повідомлення"
+form-settings-message-kick-message-blank: "&cПовідомлення при відключенні не може бути порожнім"
+form-settings-message-settings-saved: "Налаштування збережено"
+form-settings-message-settings-not-saved: "Налаштування не збережено"
+form-settings-message-whitelist-enabled: "&eБілий список увімкнений, тепер тільки дозволені гравці можуть приєднатися до сервера!"
+form-settings-message-whitelist-disabled: "&eБілий список вимкнений, тепер будь-який гравець може приєднатися до сервера!"

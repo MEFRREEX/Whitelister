@@ -23,9 +23,7 @@ public class WhitelistPlayersForm {
                 error.printStackTrace();
             } else {
                 for (String playerName : playerNames) {
-
-                    IPlayer offlinePlayer = Utils.getOfflinePlayer(playerName);
-                    String offlinePlayerName = offlinePlayer != null ? offlinePlayer.getName() : playerName;
+                    String offlinePlayerName = Utils.getOfflinePlayerName(playerName);
 
                     form.addButton(new Button()
                             .setName(Language.get("form-players-button-format", playerName, offlinePlayerName))

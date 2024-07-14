@@ -15,6 +15,11 @@ public class Utils {
         return player.getUniqueId() != null ? player : null;
     }
 
+    public static String getOfflinePlayerName(String playerName) {
+        IPlayer offlinePlayer = Utils.getOfflinePlayer(playerName);
+        return offlinePlayer != null ? offlinePlayer.getName() : playerName;
+    }
+
     public static <T> Map<Integer, T> convertArrayToMap(T[] array) {
         Map<Integer, T> map = new HashMap<>();
         for (int i = 0; i < array.length; i++) {

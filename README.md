@@ -2,7 +2,7 @@
 Advanced whitelist plugin for Nukkit and PowerNukkitX
 
 [![License: GNU GPLv3](https://img.shields.io/badge/License-GNU%20GPLv3-yellow)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-1.4.0-brightgreen)](https://github.com/MEFRREEX/Whitelister/releases/tag/1.4.0)
+[![Version](https://img.shields.io/badge/Version-1.4.3-brightgreen)](https://github.com/MEFRREEX/Whitelister/releases/tag/1.4.3)
 
 ## 📖 Overview
 **Whitelister** is an advanced whitelist plugin for Nukkit and PowerNukkitX, providing enhanced features beyond the standard whitelist. With Whitelister, you can easily manage access to your server, configure settings through forms, commands, or directly in configuration files, and more. The plugin also supports multiple languages and various database integrations.

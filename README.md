@@ -1,43 +1,55 @@
 # Whitelister
 Advanced whitelist plugin for Nukkit and PowerNukkitX
 
-[![License: GNU GPLv3](https://img.shields.io/badge/License-%20%20GNU%20GPLv3%20-yellow)](LICENSE)
+[![License: GNU GPLv3](https://img.shields.io/badge/License-GNU%20GPLv3-yellow)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-1.4.0-brightgreen)](https://github.com/MEFRREEX/Whitelister/releases/tag/1.4.0)
 
-## 🤔 Introduction
+## 📖 Overview
+**Whitelister** is an advanced whitelist plugin for Nukkit and PowerNukkitX, providing enhanced features beyond the standard whitelist. With Whitelister, you can easily manage access to your server, configure settings through forms, commands, or directly in configuration files, and more. The plugin also supports multiple languages and various database integrations.
 
-The plugin is designed to make the whitelist easier to work with and provides a number of features over the standard whitelist:
-- Configuring the whitelist in forms
-- Configuring the whitelist via commands
-- Configuring all messages in a specific file
-- Setting that allows to kick all players when whitelist is enabled
-- Json, SQLite3 and MySQL support
-- English, Russian and Ukrainian language support
+### ✨ Features
+- **User-friendly Configuration**: Manage the whitelist through in-game forms or commands.
+- **Customizable Messages**: Tailor all plugin messages in a single configuration file.
+- **Kick on Enable**: Automatically disconnect all players when the whitelist is enabled.
+- **Database Support**: Choose between JSON, SQLite3, or MySQL for storing whitelist data.
+- **Multilingual**: Supports English, Russian, and Ukrainian.
 
 ## 📷 Screenshots
-![preview_main.png](.github/preview_main.png)
-![preview_players.png](.github/preview_players.png)
-![preview_settings.png](.github/preview_settings.png)
+<p align="center">
+  <img src=".github/preview_main.png" alt="Main Menu Preview" width="400"/>
+  <img src=".github/preview_players.png" alt="Players Menu Preview" width="400"/>
+  <img src=".github/preview_settings.png" alt="Settings Menu Preview" width="400"/>
+</p>
 
 ## 💻 Commands
-| Name           | Description         |
-|----------------|---------------------|
-| /whitelister   | Plugin main command |
+| Command       | Description                       |
+|---------------|-----------------------------------|
+| `/whitelister` | Opens the main Whitelister menu. |
 
 ## 🔒 Permissions
-| Name                            | Description                                                      |
+| Permission                      | Description                                                      |
 |---------------------------------|------------------------------------------------------------------|
-| whitelister.command.whitelister | Allows the player to use the /whitelister command                |
-| whitelister.bypass              | Allows a player to join a whitelisted server without being on it |
+| `whitelister.command.whitelister` | Allows the player to use the `/whitelister` command.             |
+| `whitelister.bypass`            | Allows a player to join a whitelisted server without being listed.|
 
 ## 📋 Events
-| Name                        | Cancellable | Description                                                    |
-|-----------------------------|-------------|----------------------------------------------------------------|
-| WhitelistKickPlayerEvent    | true        | Called when a player is kicked from the server by a whitelist  |
+| Event Name                | Cancellable | Description                                                     |
+|---------------------------|-------------|-----------------------------------------------------------------|
+| `WhitelistKickPlayerEvent` | Yes         | Triggered when a player is kicked due to whitelist activation.   |
 
-## 🔌 Installation
-1. Download the plugin from the [releases](https://github.com/MEFRREEX/Whitelister/releases).
-2. Place the plugin .jar file in your `plugins` folder
-3. Download [JOOQConnector](https://github.com/MEFRREEX/JOOQConnector) and place the JOOQConnector .jar file in your `plugins` folder.
-4. Download [FormConstructor](https://github.com/MEFRREEX/FormConstructor) and place the FormConstructor .jar file in your `plugins` folder.
-5. Start the server!
+## 🚀 Installation
+To get started with Whitelister, follow these steps:
+
+1. **Download Whitelister**  
+   Head to the [releases page](https://github.com/MEFRREEX/Whitelister/releases) and download the latest `.jar` file.
+2. **Place the Plugin in Your Server**  
+   Move the downloaded `.jar` file to your server's `plugins` folder.
+3. **Install Dependencies**  
+   - Download [JOOQConnector](https://github.com/MEFRREEX/JOOQConnector) and place its `.jar` file in the `plugins` folder.
+   - Download [FormConstructor](https://github.com/MEFRREEX/FormConstructor) and place its `.jar` file in the `plugins` folder.
+4. **Start the Server**  
+   Launch your server to complete the setup and generate configuration files.
+
+---
+
+[Switch to Russian](README_RU.md)

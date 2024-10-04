@@ -52,4 +52,4 @@ To get started with Whitelister, follow these steps:
 
 ---
 
-[Switch to Russian](README_RU.md)
+[Switch to Russian](README_ru.md)
